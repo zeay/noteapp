@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>UrNote</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.mobile-1.1.1.min.js"></script>
+    <script src="js/note1.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div data-role="page" id="homepage">
+    <div data-role="header">
+        <h1>Your Notes</h1>
+    </div>
+    <div data-role"content" id="content" style="margin-top: 30px">
+        <a href="#addNote" data-theme="e" data-role="button">Add Notes</a>
+        <div style="margin:45px"></div>
+        <ul id="Notelist" data-role="listview" data-filter="true" data-filter-placeholder="Search">
+            
+        </ul>
+    </div>
+ <div data-role="footer" id="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="bottom">
+        <ul>
+            <li><a href="#homepage" data-icon="home">Homepage</a></li>
+            <li><a href="#aboutpage" data-icon="info">AboutUs</a></li>
+        </ul>
+    </div>
+    </div>
+ </div>
+<div data-role="page" id="addNote">
+    <div data-role="header" data-position="fixed" data-theme="b" >
+         <a href="#homepage" data-rel="back">Back</a>
+        <h2>Creating Note..</h2>
+    </div>
+    <div data-role="content">
+    <form data-role=form id="form_note">
+        <input type="text" placeholder="Note Name" required id="name">
+        <select name="NoteType" id="NoteType"  data-native-menu="false">
+            <option value="select">Select The Type</option>
+            <option value="Common" required>Common</option>
+            <option value="Daily" required>Daily Work</option>
+            <option value="Event" required>Event</option>
+            <option value="Important" required>Important</option>
+            </select>    
+       
+       <label>Event/Till date</label>
+      <input type="date" id="edate" required>
+       <label>Even Time</label>
+       <input type="time" id="etime" >
+        <label>Event End Time</label>
+        <input type="time" id="eendtime">
+        <label>Detail Of Note</label>
+        <textarea name="detail" id="detail" placeholder="Describe Your Note" required></textarea>
+        <input type="submit" id="sbutton" value="Save" >
+    </form>
+    </div>
+    </div>
+<div id="aboutpage" data-role="page">
+    <div data-role="header">
+        <h2>About UrNote</h2>
+        <a href="#" data-rel="back">Back</a>
+        </div>
+    <div data-role="content" data-theme="e">
+        <h1 style="text-align: center">Developed By</h1>
+        <p style="text-align: center"><strong>BEuPY Developers</strong></p>
+    </div>
+    <div data-role="content" data-theme="b" style="text-align: center">
+        <p style="font-size: 23px;">Supported By:</p>
+        <p class="srt"><a href="http://www.srtjava.com" class="aa">SRT Java</a></p>
+    </div>
+    <div data-role="content" class="Beupy">
+        <h4>Version Detail</h4>
+        <p><strong>Intial Version</strong>: <em>1.0</em></p>
+        <p>For Support And Quries Mail Us</p>
+        <a href="mailto:beupyinaction@gmail.com" class="aa">BEuPY</a>
+        </div>
+    <div data-role="footer" id="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="bottom">
+        <ul>
+            <li><a href="#homepage" data-icon="home">Homepage</a></li>
+            <li><a href="#aboutpage" data-icon="info">AboutUs</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+</body>
+</html>

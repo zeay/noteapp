@@ -1,0 +1,27 @@
+.pagearea{
+    
+    text-align: center;
+    background: white;
+}
+.box{
+    border: 2px solid black;
+    font-size: 25px;
+}
+.ntype{
+    font-weight: bold;
+}
+.n{
+    font-weight: bold;
+    font-size: 20px;
+}
+.ediv{
+    font-size: 20px;
+}
+.aa{
+    text-decoration: none;
+    background: #fff;
+    
+}
+.aa:hover{
+    background: brown;
+    }
