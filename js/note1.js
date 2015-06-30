@@ -69,7 +69,7 @@ if (localStorage.getItem("noote")) {
                 }
 
                 //remove from array
-                 noote.splice(index,0);                    
+                 noote.splice(index,1);                    
 
                 //save offline
                 localStorage.setItem('noote', JSON.stringify(noote));
