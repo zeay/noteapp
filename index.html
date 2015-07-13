@@ -39,6 +39,7 @@
     </div>
     <div data-role="content">
     <form data-role=form id="form_note">
+        <div id="f1">
         <input type="text" placeholder="Note Name" required id="name">
         <select name="NoteType" id="NoteType"  data-native-menu="false">
             <option value="select">Select The Type</option>
@@ -54,9 +55,12 @@
        <input type="time" id="etime" >
         <label>Event End Time</label>
         <input type="time" id="eendtime">
+        </div>
+        <div id="f2">
         <label>Detail Of Note</label>
         <textarea name="detail" id="detail" placeholder="Describe Your Note" required></textarea>
         <input type="submit" id="sbutton" value="Save" >
+        </div>
     </form>
     </div>
     </div>

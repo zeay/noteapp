@@ -54,12 +54,12 @@ if (localStorage.getItem("noote")) {
         };
 	
 	
-	$('.delete_button').live('click tap', function(e) {
+	$('body').on('click tap','.delete_button' ,function(e) {
                 e.stopPropagation();
                 var id = $(this).attr('href').substring(7);
                 //console.log(id);
 
-                //search for the position of the selected recipie
+                //search for the position of the selected noote
                 var index;
                 for(var i=0;i<noote.length;i++) {
                     if(noote[i].id == id) {
@@ -95,6 +95,11 @@ if (localStorage.getItem("noote")) {
                 return entityMap[s];
               });
             }
+            //descprition benefits
+            $("#f2").on("focusin focusout",function(){
+			$("#f1").slideToggle(1000);
+			
+			} );
 	
 	$("#form_note").bind("submit",function(e){
 		var datetoday=new Date();
