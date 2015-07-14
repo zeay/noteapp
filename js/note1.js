@@ -54,7 +54,7 @@ if (localStorage.getItem("noote")) {
         };
 	
 	
-	$('body').on('click tap','.delete_button' ,function(e) {
+	$('body').on('click','.delete_button' ,function(e) {
                 e.stopPropagation();
                 var id = $(this).attr('href').substring(7);
                 //console.log(id);
