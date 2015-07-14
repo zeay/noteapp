@@ -47,7 +47,7 @@ if (localStorage.getItem("noote")) {
     </div>\
                 </div>\
                 </div>'
-                               
+                          
                 $("body").append(notepage);
                 $("#Notelist").append(homepageelement);
                  $("#Notelist").listview("refresh");
@@ -102,8 +102,10 @@ if (localStorage.getItem("noote")) {
 			} );
 	
 	$("#form_note").bind("submit",function(e){
+        
 		var datetoday=new Date();
 		//console.log(datetoday);
+        
 		var newnoote={
 		   id: noote.length+1,
                     Notename: escapeHTML($('#name').val()),
@@ -114,6 +116,9 @@ if (localStorage.getItem("noote")) {
 		    EventEndTime: escapeHTML($('#eendtime').val()),
 		    DetailNote: escapeHTML($('#detail').val())
 		};
+        if($('#NoteType option:selected').val()=="select"){
+        $("#error").html("<h3>You Have To Select a Type Of Note You Are Creating It's Can't Be Blank</h3>")
+        }else{
 		noote.push(newnoote);
                 
                 addnoote(newnoote); 
@@ -126,9 +131,15 @@ if (localStorage.getItem("noote")) {
                 
                 $.mobile.changePage("#homepage");
                 return false;
+        };
+        return false;
 		
 		});
 	
 	shownote();	
 });
+
+function add(){
+$("#form_note").get(0).reset();
+}
 

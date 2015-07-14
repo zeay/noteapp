@@ -5,9 +5,11 @@
     <title>UrNote</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
-    <script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/jquery.mobile-1.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/themes/beupytheme.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.min.css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/note1.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +19,7 @@
         <h1>Your Notes</h1>
     </div>
     <div data-role"content" id="content" style="margin-top: 30px">
-        <a href="#addNote" data-theme="e" data-role="button">Add Notes</a>
+        <a href="#addNote" data-theme="e" data-role="button" id="add" onclick="add()">Add Notes</a>
         <div style="margin:45px"></div>
         <ul id="Notelist" data-role="listview" data-filter="true" data-filter-placeholder="Search">
             
@@ -33,16 +35,17 @@
     </div>
  </div>
 <div data-role="page" id="addNote">
-    <div data-role="header" data-position="fixed" data-theme="b" >
+    <div data-role="header" data-position="fixed">
          <a href="#homepage" data-rel="back">Back</a>
         <h2>Creating Note..</h2>
     </div>
-    <div data-role="content">
+    <div data-role="content" class="ui-content">
     <form data-role=form id="form_note">
         <div id="f1">
         <input type="text" placeholder="Note Name" required id="name">
         <select name="NoteType" id="NoteType"  data-native-menu="false">
             <option value="select">Select The Type</option>
+            <optgroup label="Choose :">
             <option value="Common" required>Common</option>
             <option value="Daily" required>Daily Work</option>
             <option value="Event" required>Event</option>
@@ -59,9 +62,10 @@
         <div id="f2">
         <label>Detail Of Note</label>
         <textarea name="detail" id="detail" placeholder="Describe Your Note" required></textarea>
+       </div>                                   
         <input type="submit" id="sbutton" value="Save" >
-        </div>
     </form>
+        <div id="error"></div>
     </div>
     </div>
 <div id="aboutpage" data-role="page">
@@ -69,11 +73,13 @@
         <h2>About UrNote</h2>
         <a href="#" data-rel="back">Back</a>
         </div>
-    <div data-role="content" data-theme="e">
+    <div data-role="content" class="darea ui-content">
         <h1 style="text-align: center">Developed By</h1>
         <p style="text-align: center"><strong>BEuPY Developers</strong></p>
+        <p>This is stable intial version of Your Note.Many other feature is going to come...</p>
+        <h5>This is the first app of Beupy Developer ("Kumar Saurabh").</h5>
     </div>
-    <div data-role="content" data-theme="b" style="text-align: center">
+    <div data-role="content" data-theme="b" style="text-align: center" class="darea2 ui-content">
         <p style="font-size: 23px;">Supported By:</p>
         <p class="srt"><a href="http://www.srtjava.com" class="aa">SRT Java</a></p>
     </div>
@@ -81,7 +87,7 @@
         <h4>Version Detail</h4>
         <p><strong>Intial Version</strong>: <em>1.0</em></p>
         <p>For Support And Quries Mail Us</p>
-        <a href="mailto:beupyinaction@gmail.com" class="aa">BEuPY</a>
+        <a href="mailto:beupydev@yahoo.com" class="aa">BEuPY</a>
         </div>
     <div data-role="footer" id="footer" data-position="fixed">
     <div data-role="navbar" data-iconpos="bottom">

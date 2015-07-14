@@ -19,9 +19,20 @@
 }
 .aa{
     text-decoration: none;
-    background: #fff;
-    
+    color: aqua;
+    }
+
+.darea{
+    background-color: bisque;
+    text-align: center;
 }
+
+.darea2{
+    background-color:darkkhaki;
+    font-size: 20px;
+}
+
+
 .aa:hover{
-    background: brown;
+    background-color: cornflowerblue;
     }
