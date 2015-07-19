@@ -1,8 +1,9 @@
 //brain
-
 $(document).ready(function (){
 var noote;
 
+  
+    
 if (localStorage.getItem("noote")) {
         noote=JSON.parse(localStorage.getItem("noote"));
     }else{
