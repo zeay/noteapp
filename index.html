@@ -16,10 +16,10 @@
 <body>
 <div data-role="page" id="homepage">
     <div data-role="header">
-        <h1>Your Notes</h1>
+        <h1>Ur Notes</h1>
     </div>
     <div data-role="content" id="content" style="margin-top: 30px">
-        <a href="#addNote" data-theme="e" data-role="button" id="add" onclick="add()">Add Notes</a>
+        <a href="#addNote" data-theme="e" data-role="button" id="add" onclick="add()" >Add Notes</a>
         <div style="margin:45px"></div>
         <ul id="Notelist" data-role="listview" data-filter="true" data-filter-placeholder="Search" data-inset="true">
             
@@ -52,12 +52,12 @@
             <option value="Important" required>Important</option>
             </select>    
        
-       <label>Event/Till date</label>
-      <input type="date" id="edate" required>
+       <label>Event date</label>
+      <input type="date" id="edate">
        <label>Even Time</label>
        <input type="time" id="etime" >
-        <label>Event End Time</label>
-        <input type="time" id="eendtime">
+        <label style="display:none;">Event End Time</label>
+        <input type="time" id="eendtime" style="display:none;">
         </div>
         <div id="f2">
         <label>Detail Of Note</label>
@@ -98,7 +98,5 @@
     </div>
     </div>
 </div>
-<script src="js/itsus.js"></script>
-
 </body>
 </html>

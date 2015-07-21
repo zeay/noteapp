@@ -34,7 +34,7 @@ if (localStorage.getItem("noote")) {
 		    <label>Created Date</label><p>'+escapeHTML(DATA.CreatedDate)+'</p>\
                     <label>Event/Till Date</label><p>'+escapeHTML(DATA.EventDate)+'</p>\
                     <label>Event Time</label><p>'+escapeHTML(DATA.EventTime)+'</p>\
-                    <label>Event End Time</label><p>'+escapeHTML(DATA.EventEndTime)+'</p>\
+                    <label style="display:none;">Event End Time</label><p style="display:none;">'+escapeHTML(DATA.EventEndTime)+'</p>\
                     </div>\
                     <label><h2>Detail</h2></label><p class="box">'+escapeHTML(DATA.DetailNote)+'</p>\
                     </div>\
@@ -86,13 +86,12 @@ if (localStorage.getItem("noote")) {
                 "<": "&lt;",
                 ">": "&gt;",
                 '"': '&quot;',
-                "'": '&#39;',
                 "/": '&#x2F;'
               };
              
             //remover caracteres de HTML y comillas
             var escapeHTML = function (string) {
-              return String(string).replace(/[&<>"'\/]/g, function (s) {
+              return String(string).replace(/[&<>"\/]/g, function (s) {
                 return entityMap[s];
               });
             }
@@ -114,7 +113,7 @@ if (localStorage.getItem("noote")) {
                     CreatedDate: escapeHTML(datetoday),
                     EventDate: escapeHTML($('#edate').val()),
                     EventTime: escapeHTML($('#etime').val()),
-		    EventEndTime: escapeHTML($('#eendtime').val()),
+		    //EventEndTime: escapeHTML($('#eendtime').val()),
 		    DetailNote: escapeHTML($('#detail').val())
 		};
         if($('#NoteType option:selected').val()=="select"){
